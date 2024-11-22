@@ -9,7 +9,7 @@ export default function Jokes() {
     setLoading(true);
     setError("");
     try {
-      const response = await fetch("https://contentgen-six.vercel.app/api/jokes");
+      const response = await fetch("https://contentgen-two.vercel.app/?vercelToolbarCode=OyhHDnBAnOXv-xf/api/jokes");
       if (!response.ok) throw new Error("Failed to fetch jokes");
       const data = await response.json();
       setJokes([data]); // Adjust based on API response structure
