@@ -7,15 +7,13 @@ const cors = require('cors');
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://contentgen-ih6d.vercel.app/"],
+        origin: ["https://contentgen-ih6d.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
 ));
-app.get("/", (req, res) => {
-    res.json("Hello");
-})
-app.get('api/jokes', async (req, res) => {
+
+app.get('/api/jokes', async (req, res) => {
     console.log("hello11");
     let config = {
         method: 'get',
